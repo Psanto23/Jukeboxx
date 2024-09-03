@@ -1,1 +1,2 @@
-Instructions to come
+Download entire file 
+Open home.html
