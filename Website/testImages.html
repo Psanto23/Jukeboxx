@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Album Covers</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        .album-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .album {
+            width: 150px;
+            height: 150px;
+            margin-right: 10px;
+            flex: none;
+        }
+        .marquee, .marquee-reverse 
+        {
+            display: flex;
+        }
+
+        .marquee-reverse 
+        {
+            position: absolute;
+            top: 400px;
+            animation: marquee-reverse 90s linear infinite;
+        }
+
+        .marquee 
+        {
+            position: absolute;
+            top: 200px;
+        
+            display: flex;
+            animation: marquee 60s linear infinite;
+        }
+
+        @keyframes marquee {
+            100% { transform: translateX(0); }
+            0% { transform: translateX(-50%); }
+        }
+
+        @keyframes marquee-reverse {
+            100% { transform: translateX(-50%); }
+            0% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="album-container">
+        <div class="marquee">
+            <img src="Images/1989.jpg" alt="Album 1" class="album">
+            <img src="Images/2014 Forest.jpg" alt = "Album 2" class="album">
+            <img src="Images/444.jpg" alt="Album 3" class="album">
+            <img src="Images/6god.jpg" alt="Album 4" class="album">
+            <img src="Images/acidrap.jpg" alt="Album 5" class="album">
+            <img src="Images/taboo.jpg" alt="Album 6" class="album">
+            <img src="Images/thesun.jpg" alt="Album 7" class="album">
+            <img src="Images/wu tang.jpg" alt="Album 8" class="album">
+            <img src="Images/luv.jpg" alt="Album 9" class="album">
+            <img src="Images/birds.jpg" alt="Album 10" class="album">
+            <img src="Images/1989.jpg" alt="Album 1" class="album">
+            <img src="Images/2014 Forest.jpg" alt="Album 2" class="album">
+            <img src="Images/444.jpg" alt="Album 3" class="album">
+            <img src="Images/6god.jpg" alt="Album 4" class="album">
+            <img src="Images/acidrap.jpg" alt="Album 5" class="album">
+            <img src="Images/taboo.jpg" alt="Album 6" class="album">
+            <img src="Images/thesun.jpg" alt="Album 7" class="album">
+            <img src="Images/wu tang.jpg" alt="Album 8" class="album">
+            <img src="Images/luv.jpg" alt="Album 9" class="album">
+            <img src="Images/birds.jpg" alt="Album 10" class="album">
+        </div>
+
+        <div class = "marquee-reverse">
+            <img src="Images/brockhampton.jpg" alt="Album 1" class="album">
+            <img src="Images/biggie.jpg" alt = "Album 2" class="album">
+            <img src="Images/savage mode.jpg" alt="Album 3" class="album">
+            <img src="Images/dieformybitch.jpg" alt="Album 4" class="album">
+            <img src="Images/letsstart.jpg" alt="Album 5" class="album">
+            <img src="Images/nothing was the same.jpg" alt="Album 6" class="album">
+            <img src="Images/rage.jpg" alt="Album 7" class="album">
+            <img src="Images/reddevil.jpg" alt="Album 8" class="album">
+            <img src="Images/wedont.jpg" alt="Album 9" class="album">
+            <img src="Images/pac.jpg" alt="Album 10" class="album">
+            <img src="Images/brockhampton.jpg" alt="Album 1" class="album">
+            <img src="Images/biggie.jpg" alt = "Album 2" class="album">
+            <img src="Images/savage mode.jpg" alt="Album 3" class="album">
+            <img src="Images/dieformybitch.jpg" alt="Album 4" class="album">
+            <img src="Images/letsstart.jpg" alt="Album 5" class="album">
+            <img src="Images/nothing was the same.jpg" alt="Album 6" class="album">
+            <img src="Images/rage.jpg" alt="Album 7" class="album">
+            <img src="Images/reddevil.jpg" alt="Album 8" class="album">
+            <img src="Images/wedont.jpg" alt="Album 9" class="album">
+            <img src="Images/pac.jpg" alt="Album 10" class="album">
+        </div>
+    </div>
+</body>
+</html>

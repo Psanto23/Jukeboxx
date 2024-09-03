@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Jukebox</title>
+    <style>
+        header
+        {
+            background-color: white;
+            font-family: 'Retrorama', sans-serif;
+            text-align: center;
+        }
+        section
+        {
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            background-color: black;
+            text-align: center;
+        }
+        nav
+        {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+           
+        }
+        footer
+        {
+            color: rgb(255, 254, 254);
+            position: absolute;
+            background-color: rgb(0, 0, 0);
+            top: 600px;
+            right: 10px;
+            width: 100%;
+            text-align: center;
+            padding: 9px;
+        }
+        body 
+        {
+            background-color: black;
+            margin: 0;
+            overflow: hidden;
+        }
+        .album-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .album {
+            width: 150px;
+            height: 150px;
+            margin-right: 10px;
+            flex: none;
+        }
+        .marquee, .marquee-reverse 
+        {
+            display: flex;
+        }
+
+        .marquee-reverse 
+        {
+            position: absolute;
+            top: 400px;
+            animation: marquee-reverse 80s linear infinite;
+        }
+
+        .marquee 
+        {
+            position: absolute;
+            top: 200px;
+            display: flex;
+            animation: marquee 80s linear infinite;
+        }
+
+        @keyframes marquee {
+            100% { transform: translateX(0); }
+            0% { transform: translateX(-50%); }
+        }
+
+        @keyframes marquee-reverse {
+            100% { transform: translateX(-50%); }
+            0% { transform: translateX(0); }
+        }
+
+
+    </style>
+
+</head>
+
+<header>
+    <h1 id="site-title">Jukeboxx</h1>
+        <nav>
+            <a href="home.html" id="home-link">Home</a>
+            <a href="friends.html" id="add-friends-link">Add Friends</a>
+            <a href="wall.html" id="wall-link">My Wall</a>
+            <a href="login.html" id="login-link">Login</a>
+            <a href="register.html" id="register-link">Register</a>
+            <a href="about.html" id="about-link">About</a>
+        </nav> 
+</header>
+
+<section>
+    <em>It's... it's... Grippy</em>
+</section>
+<body>
+    <div class="album-container">
+        <div class="marquee">
+            <img src="Images/1989.jpg" alt="Album 1" class="album">
+            <img src="Images/2014 Forest.jpg" alt = "Album 2" class="album">
+            <img src="Images/444.jpg" alt="Album 3" class="album">
+            <img src="Images/6god.jpg" alt="Album 4" class="album">
+            <img src="Images/acidrap.jpg" alt="Album 5" class="album">
+            <img src="Images/taboo.jpg" alt="Album 6" class="album">
+            <img src="Images/thesun.jpg" alt="Album 7" class="album">
+            <img src="Images/wu tang.jpg" alt="Album 8" class="album">
+            <img src="Images/luv.jpg" alt="Album 9" class="album">
+            <img src="Images/birds.jpg" alt="Album 10" class="album">
+            <img src="Images/1989.jpg" alt="Album 1" class="album">
+            <img src="Images/2014 Forest.jpg" alt="Album 2" class="album">
+            <img src="Images/444.jpg" alt="Album 3" class="album">
+            <img src="Images/6god.jpg" alt="Album 4" class="album">
+            <img src="Images/acidrap.jpg" alt="Album 5" class="album">
+            <img src="Images/taboo.jpg" alt="Album 6" class="album">
+            <img src="Images/thesun.jpg" alt="Album 7" class="album">
+            <img src="Images/wu tang.jpg" alt="Album 8" class="album">
+            <img src="Images/luv.jpg" alt="Album 9" class="album">
+            <img src="Images/birds.jpg" alt="Album 10" class="album">
+        </div>
+
+        <div class = "marquee-reverse">
+            <a href="https://open.spotify.com/album/67smHJOf5YlFwad6dAlppm"> 
+                <img src="Images/brockhampton.jpg" alt="Album 1" class="album"> 
+            </a> 
+
+            <a href="https://open.spotify.com/album/2HTbQ0RHwukKVXAlTmCZP2">
+                <img src="Images/biggie.jpg" alt = "Album 2" class="album">
+            </a>
+            <a href="https://open.spotify.com/album/6wTyGUWGCilBFZ837k5aRi">
+                <img src="Images/savage mode.jpg" alt="Album 3" class="album">
+            </a>
+           
+            <img src="Images/dieformybitch.jpg" alt="Album 4" class="album">
+            <img src="Images/letsstart.jpg" alt="Album 5" class="album">
+            <img src="Images/nothing was the same.jpg" alt="Album 6" class="album">
+            <img src="Images/rage.jpg" alt="Album 7" class="album">
+            <img src="Images/reddevil.jpg" alt="Album 8" class="album">
+            <img src="Images/wedont.jpg" alt="Album 9" class="album">
+            <img src="Images/pac.jpg" alt="Album 10" class="album">
+            <img src="Images/brockhampton.jpg" alt="Album 1" class="album">
+            <img src="Images/biggie.jpg" alt = "Album 2" class="album">
+            <img src="Images/savage mode.jpg" alt="Album 3" class="album">
+            <img src="Images/dieformybitch.jpg" alt="Album 4" class="album">
+            <img src="Images/letsstart.jpg" alt="Album 5" class="album">
+            <img src="Images/nothing was the same.jpg" alt="Album 6" class="album">
+            <img src="Images/rage.jpg" alt="Album 7" class="album">
+            <img src="Images/reddevil.jpg" alt="Album 8" class="album">
+            <img src="Images/wedont.jpg" alt="Album 9" class="album">
+            <img src="Images/pac.jpg" alt="Album 10" class="album">
+        </div>
+    </div>
+
+
+</body>
+<footer>
+    <h6>2024 Jukeboxx LLC</h6>
+</footer>
+
+
+</html>

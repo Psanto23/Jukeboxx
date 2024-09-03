@@ -1,0 +1,90 @@
+
+#site-title 
+{
+  font-size: 100px;
+  margin: 10px;
+  
+}
+
+
+ #home-link 
+ {
+  /* Custom position for Home link */
+  position: absolute;
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+  left: 50px;
+  top: 40px;
+ }
+
+#wall-link {
+  /* Custom position for My Wall link */
+  position: absolute;
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+  left: 400px; /* >number is more right */
+  top: 40px;
+
+}
+#add-friends-link
+{
+  position: absolute;
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+  left: 190px;
+  top: 40px;
+}
+
+#login-link {
+  /* Custom position for Login link */
+  position: absolute;
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+  left: 1250px;
+  top: 20px;
+
+}
+
+#register-link {
+  /* Custom position for Register link */
+  position: absolute;
+  color: black;
+  text-decoration: none;
+  left: 1250px;
+  top: 50px;
+  font-size: 30px;
+
+
+}
+
+#about-link {
+  /* Custom position for About link */
+  position: absolute;
+  color: black;
+  text-decoration: none;
+  left: 1050px;
+  top: 40px;
+  font-size: 30px;
+
+
+}
+  @font-face
+ {
+    font-family: 'Retrorama';
+    src:  url('retroma_vibes/RetromaVibes.ttf');
+    font-size: 40px;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face 
+  {
+    font-family: 'Doctor Punk';
+    src: url(doctor\ punk.otf);
+  }
+  
+  
