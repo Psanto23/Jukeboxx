@@ -1,2 +1,2 @@
-Download entire file 
-Open home.html
+1. Download entire file 
+2. Open home.html
