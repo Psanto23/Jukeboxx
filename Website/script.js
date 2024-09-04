@@ -69,7 +69,9 @@ const lyrics =
 "If Pirus and Crips all got along...every time I'm in the street I hear\rYAWK YAWK YAWK YAWK",
 "Wheezy outta here",
 "21 21 21",
-"Can I kick it?"
+"Can I kick it?",
+"Put a glock in my purse",
+
 
 
 
