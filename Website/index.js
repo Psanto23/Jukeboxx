@@ -1,20 +1,19 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const PORT = 3000;
 
-// Middleware to parse JSON data
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// Middleware to serve static files from the 'Website' directory
+app.use(express.static(path.join(__dirname)));
 
-// Basic route for login page
+// Serve the login.html file
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/login.html');
+    res.sendFile(path.join(__dirname, 'login.html'));
 });
 
-// Placeholder for login route
+// Handle login form submission
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
-    // Validate login credentials here
     res.send(`Username: ${username}, Password: ${password}`);
 });
 
