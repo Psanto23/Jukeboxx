@@ -28,7 +28,7 @@
   top: 40px;
 
 }
-#add-friends-link
+#new-take-link
 {
   position: absolute;
   color: black;
@@ -37,6 +37,7 @@
   left: 190px;
   top: 40px;
 }
+
 
 #login-link {
   /* Custom position for Login link */

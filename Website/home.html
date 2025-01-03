@@ -11,7 +11,28 @@
             background-color: white;
             font-family: 'Retrorama', sans-serif;
             text-align: center;
+
+
+
         }
+        
+    #site-title a 
+    {
+        text-decoration: none;   /* Remove underline */
+        color: inherit;          /* Inherit the h1 color */
+        font-size: inherit;      /* Inherit the h1 font size */
+        font-weight: inherit;    /* Inherit the h1 font weight */
+    }
+
+/* Style for the navigation links */
+    nav a {
+        text-decoration: none;   /* Remove underline */
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: #000;             /* Set a default color for the nav links */
+        font-size: 16px;         /* Set a size for the nav links */
+        margin-right: 15px;      /* Add space between the nav links */
+           
+    }
         
         #lyrics
         {
@@ -25,11 +46,8 @@
             font-family: 'Times New Roman', Times, serif
         }
 
-        nav
-        {
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-           
-        }
+       
+        
         footer
         {
             color: rgb(255, 254, 254);
@@ -81,12 +99,14 @@
         }
 
         
-        @keyframes marquee {
+        @keyframes marquee 
+        {
             100% { transform: translateX(0); }
             0% { transform: translateX(-50%); }
         }
 
-        @keyframes marquee-reverse {
+        @keyframes marquee-reverse 
+        {
             100% { transform: translateX(-50%); }
             0% { transform: translateX(0); }
         }
@@ -97,12 +117,14 @@
 </head>
 
 <header>
-    <h1 id="site-title">Jukeboxx</h1>
+    <h1 id="site-title">
+        <a href="home.html">Jukeboxx</a>
+      </h1>      
         <nav>
-            <a href="home.html" id="home-link">Home</a>
-            <a href="friends.html" id="add-friends-link">Add Friends</a>
-            <a href="wall.html" id="wall-link">My Wall</a>
-            <a href="http://localhost:3000" id="login-link">Login</a>
+            <a href="review.html" id="review-link">Review</a>
+            <a href="rank.html" id="rank-link">Rank</a>
+            <a href="feed.html" id="wall-link">Feed</a>
+            <a href="http://localhost:3000" target="_blank" id="login-link">Login</a>
             <a href="register.html" id="register-link">Register</a>
             <a href="about.html" id="about-link">About</a>
         </nav> 
@@ -117,132 +139,133 @@
 <body>
     <div class="album-container">
         <div class="marquee">
-            <a href="https://open.spotify.com/album/2QJmrSgbdM35R67eoGQo4j">
+            <a href="https://open.spotify.com/album/2QJmrSgbdM35R67eoGQo4j" target="_blank">
+                
                 <img src="Images/1989.jpg" alt="Album 1" class="album">
             </a>
-            <a href="https://open.spotify.com/album/0UMMIkurRUmkruZ3KGBLtG">
+            <a href="https://open.spotify.com/album/0UMMIkurRUmkruZ3KGBLtG" target="_blank">
                 <img src="Images/2014 Forest.jpg" alt = "Album 2" class="album">
             </a>
-            <a href="https://open.spotify.com/album/7GoZNNb7Yl74fpk8Z6I2cv">
+            <a href="https://open.spotify.com/album/7GoZNNb7Yl74fpk8Z6I2cv"target="_blank">
                 <img src="Images/444.jpg" alt="Album 3" class="album">
             </a>
-            <a href="https://open.spotify.com/album/0ptlfJfwGTy0Yvrk14JK1I">
+            <a href="https://open.spotify.com/album/0ptlfJfwGTy0Yvrk14JK1I"target="_blank">
                 <img src="Images/6god.jpg" alt="Album 4" class="album">
             </a>
-            <a href="https://open.spotify.com/album/2VBcztE58pBKjIDS5oEgFh">
+            <a href="https://open.spotify.com/album/2VBcztE58pBKjIDS5oEgFh"target="_blank">
                 <img src="Images/acidrap.jpg" alt="Album 5" class="album">
             </a>
-            <a href="https://open.spotify.com/album/6idVoBWP2mt1qoMtASm3gc">
+            <a href="https://open.spotify.com/album/6idVoBWP2mt1qoMtASm3gc"target="_blank">
                 <img src="Images/taboo.jpg" alt="Album 6" class="album">
             </a>
-            <a href="https://open.spotify.com/album/6jjX8mGrsWtrpYpFhGMrg1">
+            <a href="https://open.spotify.com/album/6jjX8mGrsWtrpYpFhGMrg1" target="_blank">
                 <img src="Images/thesun.jpg" alt="Album 7" class="album">
             </a>
-            <a href="https://open.spotify.com/album/3tQd5mwBtVyxCoEo4htGAV">
+            <a href="https://open.spotify.com/album/3tQd5mwBtVyxCoEo4htGAV" target="_blank">
                 <img src="Images/wu tang.jpg" alt="Album 8" class="album">
             </a>
-            <a href="https://open.spotify.com/album/7mgdTKTCdfnLoa1HXHvLYM">
+            <a href="https://open.spotify.com/album/7mgdTKTCdfnLoa1HXHvLYM" target="_blank">
                 <img src="Images/luv.jpg" alt="Album 9" class="album">
             </a>
-            <a href="https://open.spotify.com/album/42WVQWuf1teDysXiOupIZt">
+            <a href="https://open.spotify.com/album/42WVQWuf1teDysXiOupIZt" target="_blank">
                 <img src="Images/birds.jpg" alt="Album 10" class="album">
             </a>
-            <a href="https://open.spotify.com/album/2QJmrSgbdM35R67eoGQo4j">
+            <a href="https://open.spotify.com/album/2QJmrSgbdM35R67eoGQo4j" target="_blank">
                 <img src="Images/1989.jpg" alt="Album 1" class="album">
             </a>
-            <a href="https://open.spotify.com/album/0UMMIkurRUmkruZ3KGBLtG">
+            <a href="https://open.spotify.com/album/0UMMIkurRUmkruZ3KGBLtG"target="_blank">
                 <img src="Images/2014 Forest.jpg" alt = "Album 2" class="album">
             </a>
-            <a href="https://open.spotify.com/album/7GoZNNb7Yl74fpk8Z6I2cv">
+            <a href="https://open.spotify.com/album/7GoZNNb7Yl74fpk8Z6I2cv" target="_blank">
                 <img src="Images/444.jpg" alt="Album 3" class="album">
             </a>
-            <a href="https://open.spotify.com/album/0ptlfJfwGTy0Yvrk14JK1I">
+            <a href="https://open.spotify.com/album/0ptlfJfwGTy0Yvrk14JK1I" target="_blank">
                 <img src="Images/6god.jpg" alt="Album 4" class="album">
             </a>
-            <a href="https://open.spotify.com/album/2VBcztE58pBKjIDS5oEgFh">
+            <a href="https://open.spotify.com/album/2VBcztE58pBKjIDS5oEgFh" target="_blank">
                 <img src="Images/acidrap.jpg" alt="Album 5" class="album">
             </a>
-            <a href="https://open.spotify.com/album/6idVoBWP2mt1qoMtASm3gc">
+            <a href="https://open.spotify.com/album/6idVoBWP2mt1qoMtASm3gc" target="_blank">
                 <img src="Images/taboo.jpg" alt="Album 6" class="album">
             </a>
-            <a href="https://open.spotify.com/album/6jjX8mGrsWtrpYpFhGMrg1">
+            <a href="https://open.spotify.com/album/6jjX8mGrsWtrpYpFhGMrg1" target="_blank">
                 <img src="Images/thesun.jpg" alt="Album 7" class="album">
             </a>
-            <a href="https://open.spotify.com/album/3tQd5mwBtVyxCoEo4htGAV">
+            <a href="https://open.spotify.com/album/3tQd5mwBtVyxCoEo4htGAV" target="_blank">
                 <img src="Images/wu tang.jpg" alt="Album 8" class="album">
             </a>
-            <a href="https://open.spotify.com/album/7mgdTKTCdfnLoa1HXHvLYM">
+            <a href="https://open.spotify.com/album/7mgdTKTCdfnLoa1HXHvLYM" target="_blank">
                 <img src="Images/luv.jpg" alt="Album 9" class="album">
             </a>
-            <a href="https://open.spotify.com/album/42WVQWuf1teDysXiOupIZt">
+            <a href="https://open.spotify.com/album/42WVQWuf1teDysXiOupIZt" target="_blank">
                 <img src="Images/birds.jpg" alt="Album 10" class="album">
             </a>
 
         </div>
 
         <div class = "marquee-reverse">
-            <a href="https://open.spotify.com/album/67smHJOf5YlFwad6dAlppm"> 
+            <a href="https://open.spotify.com/album/67smHJOf5YlFwad6dAlppm" target="_blank"> 
                 <img src="Images/brockhampton.jpg" alt="Album 1" class="album"> 
             </a> 
 
-            <a href="https://open.spotify.com/album/2HTbQ0RHwukKVXAlTmCZP2">
+            <a href="https://open.spotify.com/album/2HTbQ0RHwukKVXAlTmCZP2" target="_blank">
                 <img src="Images/biggie.jpg" alt = "Album 2" class="album">
             </a>
-            <a href="https://open.spotify.com/album/6wTyGUWGCilBFZ837k5aRi">
+            <a href="https://open.spotify.com/album/6wTyGUWGCilBFZ837k5aRi" target="_blank">
                 <img src="Images/savage mode.jpg" alt="Album 3" class="album">
             </a>
-            <a href="https://open.spotify.com/album/7Cw4LObzgnVqSlkuIyywtI"> 
+            <a href="https://open.spotify.com/album/7Cw4LObzgnVqSlkuIyywtI" target="_blank"> 
                  <img src="Images/dieformybitch.jpg" alt="Album 4" class="album">
             </a>
 
-            <a href="https://open.spotify.com/album/6Per97deaWqrJlKQNX8RGK">
+            <a href="https://open.spotify.com/album/6Per97deaWqrJlKQNX8RGK" target="_blank">
                  <img src="Images/letsstart.jpg" alt="Album 5" class="album">
             </a>
-            <a href="https://open.spotify.com/album/5mz0mJxb80gqJIcRf9LGHJ">
+            <a href="https://open.spotify.com/album/5mz0mJxb80gqJIcRf9LGHJ" target="_blank">
                 <img src="Images/nothing was the same.jpg" alt="Album 6" class="album">
             </a>
-            <a href="https://open.spotify.com/album/0zicd2mBV8HTzSubByj4vP">
+            <a href="https://open.spotify.com/album/0zicd2mBV8HTzSubByj4vP" target="_blank">
                 <img src="Images/rage.jpg" alt="Album 7" class="album">
             </a>
-            <a href="https://open.spotify.com/album/6UMelDEJAzDUlgUi9VxPFf">
+            <a href="https://open.spotify.com/album/6UMelDEJAzDUlgUi9VxPFf" target="_blank">
                 <img src="Images/reddevil.jpg" alt="Album 8" class="album">
             </a>
-            <a href="https://open.spotify.com/album/4iqbFIdGOTzXeDtt9owjQn">
+            <a href="https://open.spotify.com/album/4iqbFIdGOTzXeDtt9owjQn" target="_blank">
                 <img src="Images/wedont.jpg" alt="Album 9" class="album">
             </a>
-            <a href="https://open.spotify.com/album/78iX7tMceN0FsnmabAtlOC">
+            <a href="https://open.spotify.com/album/78iX7tMceN0FsnmabAtlOC" target="_blank">
                 <img src="Images/pac.jpg" alt="Album 10" class="album">
             </a>
-            <a href="https://open.spotify.com/album/67smHJOf5YlFwad6dAlppm"> 
+            <a href="https://open.spotify.com/album/67smHJOf5YlFwad6dAlppm" target="_blank"> 
                 <img src="Images/brockhampton.jpg" alt="Album 1" class="album"> 
             </a> 
 
-            <a href="https://open.spotify.com/album/2HTbQ0RHwukKVXAlTmCZP2">
+            <a href="https://open.spotify.com/album/2HTbQ0RHwukKVXAlTmCZP2" target="_blank">
                 <img src="Images/biggie.jpg" alt = "Album 2" class="album">
             </a>
-            <a href="https://open.spotify.com/album/6wTyGUWGCilBFZ837k5aRi">
+            <a href="https://open.spotify.com/album/6wTyGUWGCilBFZ837k5aRi" target="_blank">
                 <img src="Images/savage mode.jpg" alt="Album 3" class="album">
             </a>
-            <a href="https://open.spotify.com/album/7Cw4LObzgnVqSlkuIyywtI"> 
+            <a href="https://open.spotify.com/album/7Cw4LObzgnVqSlkuIyywtI" target="_blank"> 
                  <img src="Images/dieformybitch.jpg" alt="Album 4" class="album">
             </a>
 
-            <a href="https://open.spotify.com/album/6Per97deaWqrJlKQNX8RGK">
+            <a href="https://open.spotify.com/album/6Per97deaWqrJlKQNX8RGK" target="_blank">
                  <img src="Images/letsstart.jpg" alt="Album 5" class="album">
             </a>
-            <a href="https://open.spotify.com/album/5mz0mJxb80gqJIcRf9LGHJ">
+            <a href="https://open.spotify.com/album/5mz0mJxb80gqJIcRf9LGHJ" target="_blank">
                 <img src="Images/nothing was the same.jpg" alt="Album 6" class="album">
             </a>
-            <a href="https://open.spotify.com/album/0zicd2mBV8HTzSubByj4vP">
+            <a href="https://open.spotify.com/album/0zicd2mBV8HTzSubByj4vP" target="_blank">
                 <img src="Images/rage.jpg" alt="Album 7" class="album">
             </a>
-            <a href="https://open.spotify.com/album/6UMelDEJAzDUlgUi9VxPFf">
+            <a href="https://open.spotify.com/album/6UMelDEJAzDUlgUi9VxPFf" target="_blank">
                 <img src="Images/reddevil.jpg" alt="Album 8" class="album">
             </a>
-            <a href="https://open.spotify.com/album/4iqbFIdGOTzXeDtt9owjQn">
+            <a href="https://open.spotify.com/album/4iqbFIdGOTzXeDtt9owjQn" target="_blank">
                 <img src="Images/wedont.jpg" alt="Album 9" class="album">
             </a>
-            <a href="https://open.spotify.com/album/78iX7tMceN0FsnmabAtlOC">
+            <a href="https://open.spotify.com/album/78iX7tMceN0FsnmabAtlOC" target="_blank">
                 <img src="Images/pac.jpg" alt="Album 10" class="album">
             </a>
            
