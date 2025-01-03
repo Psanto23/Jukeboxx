@@ -2,7 +2,7 @@ const lyrics =
 [
  "I'll admit it, i'll admit it...",
  "It's... It's... Grippy",
-  "My dick is like an accent mark it’s all about the over E's",
+"My dick is like an accent mark it’s all about the over E's",
  "Nas is like",
  "No cap and gown, I didn't go to class",
  "Metro shut yo ho ass up and make some drums",
@@ -26,7 +26,7 @@ const lyrics =
  "Smoking on your top 5 tonight, tonight...",
  "That be Mawly Raw!",
  "OH!...FUCK!     SHIT!     BITCH!",
- "Tay Keith, fuck these n*ggas up!",
+ "Tay Keith, fuck these niggas up!",
  "Oh my god Ronny",
  "Yo Pierre, you wanna come out here?",
  "Mustard on the beat ho",
@@ -46,7 +46,7 @@ const lyrics =
  "First things first rest in peace Uncle Phil!",
  "This is a Melo Beat",
  "AXL!",
- "I walk around like that n*gga",
+ "I walk around like that nigga",
  "Pills on me blue, like a bruise, better yet: blues clues",
  "I got up on my birkinnnn, it's workinnn, she said shes a virginn, it's hurtinn",
  "999",
@@ -71,6 +71,8 @@ const lyrics =
 "21 21 21",
 "Can I kick it?",
 "Put a glock in my purse",
+"Pull up in GT3, fly off in a jet",
+
 
 
 

@@ -4,67 +4,73 @@
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Jukebox</title>
+    <title>The Jukeboxx</title>
     <style>
-        header
-        {
-            background-color: white;
-            font-family: 'Retrorama', sans-serif;
-            text-align: center;
+       /* Remove default margins and padding */
+       body, html
+            {
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden; /* Prevent horizontal scrolling */
+            }
+
+            header 
+            {
+                background-color: white;
+                padding: 10px 20px; /* Space inside the header */
+                position: fixed; /* Sticks to the top of the page */
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000; /* Ensures the header is on top of other elements */
+            }
+
+            .header-nav 
+            {
+                font-family: 'aboxfor', sans-serif;
+                display: flex;
+                justify-content: space-between; /* Spreads links evenly */
+                align-items: center; /* Vertically centers the content */
+                margin: 0; /* Removes any extra spacing */
+            }
+
+         .header-nav a 
+            {
+                color: black;
+                text-decoration: none;
+                font-size: 30px;
+                margin: 0 10px;
+                padding: 10px 15px; /* Adds space inside the clickable area */
+                display: inline-block;
+            }
+
+            body 
+            {
+                padding-top: 50px; /* Ensures content below the header is not hidden */
+                background-color: black;
+            }
 
 
+            #site-title
+            {
+                font-size: 40px;
+                font-family: 'Retrorama', sans-serif;
+            }
 
-        }
-        
-    #site-title a 
-    {
-        text-decoration: none;   /* Remove underline */
-        color: inherit;          /* Inherit the h1 color */
-        font-size: inherit;      /* Inherit the h1 font size */
-        font-weight: inherit;    /* Inherit the h1 font weight */
-    }
+            @font-face
+             {
+                font-family: 'Retrorama';
+                src:  url('retroma_vibes/RetromaVibes.ttf');
+                font-size: 40px;
+                font-weight: normal;
+                font-style: normal;
+            }
 
-/* Style for the navigation links */
-    nav a {
-        text-decoration: none;   /* Remove underline */
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        color: #000;             /* Set a default color for the nav links */
-        font-size: 16px;         /* Set a size for the nav links */
-        margin-right: 15px;      /* Add space between the nav links */
-           
-    }
-        
-        #lyrics
-        {
-            font-style: italic;
-            color: rgb(255, 255, 255);
-            font-size: 15px;
-            text-align: center;
-            margin: 20px 0;
-            padding: 10px;
-            border-radius: 10px;
-            font-family: 'Times New Roman', Times, serif
-        }
+            @font-face {
+                font-family: 'aboxfor';
+                src: url('a_box_for/A_Box_For.ttf');
 
-       
-        
-        footer
-        {
-            color: rgb(255, 254, 254);
-            position: absolute;
-            background-color: rgb(0, 0, 0);
-            top: 600px;
-            right: 10px;
-            width: 100%;
-            text-align: center;
-            padding: 9px;
-        }
-        body 
-        {
-            background-color: black;
-            margin: 0;
-            overflow: hidden;
-        }
+            }
         .album-container {
             display: flex;
             flex-direction: column;
@@ -81,6 +87,7 @@
         .marquee, .marquee-reverse 
         {
             display: flex;
+            margin-top: -30px;
         }
 
         .marquee-reverse 
@@ -98,6 +105,28 @@
             animation: marquee 80s linear infinite;
         }
 
+        #lyrics
+        {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            text-align: center;
+            margin-top: 70px;
+            font-size: 15px;
+            color: white;
+        }
+
+        footer
+        {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 10px;
+            margin-top: 500px;
+            
+        }
+
+  
+
         
         @keyframes marquee 
         {
@@ -111,24 +140,27 @@
             0% { transform: translateX(0); }
         }
 
+        @font-face
+        {
+            font-family: 'Retrorama';
+            src:  url('retroma_vibes/RetromaVibes.ttf');
+        }
+
 
     </style>
 
 </head>
 
 <header>
-    <h1 id="site-title">
-        <a href="home.html">Jukeboxx</a>
-      </h1>      
-        <nav>
-            <a href="review.html" id="review-link">Review</a>
-            <a href="rank.html" id="rank-link">Rank</a>
-            <a href="feed.html" id="wall-link">Feed</a>
-            <a href="http://localhost:3000" target="_blank" id="login-link">Login</a>
-            <a href="register.html" id="register-link">Register</a>
-            <a href="about.html" id="about-link">About</a>
-        </nav> 
-</header>
+
+    <nav class="header-nav">
+      <a href="rank_pop_up.html">Rank</a>
+      <a href="review.html">Review</a>
+      <a id='site-title' href="home.html" >Jukeboxx</a>
+      <a href="feed.html">Feed</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+  </header>
 
 
 <div id="lyrics"></div>
@@ -268,16 +300,17 @@
             <a href="https://open.spotify.com/album/78iX7tMceN0FsnmabAtlOC" target="_blank">
                 <img src="Images/pac.jpg" alt="Album 10" class="album">
             </a>
-           
+
             
         </div>
     </div>
 
+    <footer>
+        <h6>2024 Jukeboxx LLC</h6>
+    </footer>
 
 </body>
-<footer>
-    <h6>2024 Jukeboxx LLC</h6>
-</footer>
+
 
 
 </html>
