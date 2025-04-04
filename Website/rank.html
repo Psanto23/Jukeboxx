@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rank Your Music</title>
+</head>
+<style>/* Basic reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Header styling */
+    header {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+    }
+    
+    header .header-content 
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    header nav ul {
+        color: white;
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+    }
+    
+    header nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    /* Rank page styling */
+    .rank-container {
+        padding: 20px;
+    }
+    
+    .rank-container h1 
+    {
+        color: white;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    #rank-list {
+        list-style-type: none;
+        padding: 10px 0;
+    }
+    
+    #rank-list li {
+        padding: 5px;
+        border: 1px solid #ddd;
+        margin: 5px 0;
+    }
+    
+    #add-item {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    #add-item:hover {
+        background-color: #555;
+    }
+    /* Styling for the list item */
+.rank-item {
+    list-style-type: none; /* Remove bullet points */
+    padding: 5px;
+}
+
+/* Styling for the input field */
+.rank-input {
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
+    text-align: left;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+
+/* Styling for the final static text after editing */
+.final-text 
+{
+    font-family: 'Times New Roman', serif;
+    color: white;
+    font-size: 16px;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.delete-button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.delete-button:hover {
+    background: darkred;
+}
+
+    </style>
+<body>
+    <!-- Header Container (loaded dynamically from header.html) -->
+    <div id="header-container"></div>
+
+    <!-- Main Content of Rank Page -->
+    <div class="rank-container">
+        <h1>Rank Your Favorite Music</h1>
+        
+        <ul id="rank-list">
+            <!-- Dynamic rank list will go here -->
+        </ul>
+
+        <button id="add-item">Add Rank Item</button>
+    </div>
+
+    <!-- JavaScript to load the header and manage ranks -->
+    <script>
+        // Fetch the header
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-container").innerHTML = data;
+            });
+
+        // Add a rank item to the list
+        document.getElementById('add-item').addEventListener('click', function () {
+    let rankList = document.getElementById('rank-list');
+    
+    // Create a new list item
+    let newRankItem = document.createElement('li');
+    newRankItem.classList.add('rank-item'); // Apply CSS styles
+
+    // Create an editable input field
+    let inputField = document.createElement('input');
+    inputField.type = 'text';
+    inputField.value = 'New Rank Item'; // Default placeholder text
+    inputField.classList.add('rank-input'); // Apply input styling
+
+    // When user presses Enter or clicks away, convert input to static text
+    inputField.addEventListener('blur', function () {
+    let text = inputField.value;
+
+    // Create a span to display static text
+    let textSpan = document.createElement('span');
+    textSpan.textContent = text;
+    textSpan.classList.add('final-text');
+
+    // When clicked, turn it back into an input field
+    textSpan.addEventListener('click', function () {
+        let editInput = document.createElement('input');
+        editInput.type = 'text';
+        editInput.value = textSpan.textContent;
+        editInput.classList.add('rank-input');
+
+        editInput.addEventListener('blur', function () {
+            textSpan.textContent = editInput.value;
+            textSpan.style.display = 'inline';
+            editInput.replaceWith(textSpan);
+        });
+
+        editInput.addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                editInput.blur();
+            }
+        });
+
+        textSpan.replaceWith(editInput);
+        editInput.focus();
+    });
+
+    newRankItem.innerHTML = ''; // Clear the li element
+    newRankItem.appendChild(textSpan);
+});
+
+
+    inputField.addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+            inputField.blur(); // Trigger the blur event when Enter is pressed
+        }
+    });
+
+    newRankItem.appendChild(inputField);
+    rankList.appendChild(newRankItem);
+
+    // Focus the input field immediately
+    inputField.focus();
+
+    // Create a delete button
+    let deleteButton = document.createElement('button');
+    deleteButton.textContent = 'X';
+    deleteButton.classList.add('delete-button');
+
+    deleteButton.addEventListener('click', function () {
+        newRankItem.remove();
+    });
+
+    // Append everything
+    newRankItem.appendChild(textSpan);
+    newRankItem.appendChild(deleteButton);
+    rankList.appendChild(newRankItem);
+
+
+});
+    </script>
+</body>
+</html>
+

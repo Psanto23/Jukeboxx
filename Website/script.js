@@ -72,6 +72,7 @@ const lyrics =
 "Can I kick it?",
 "Put a glock in my purse",
 "Pull up in GT3, fly off in a jet",
+"Hi-Fidelity"
 
 
 
@@ -96,4 +97,27 @@ function getRandomLyric() {
 }
 
 document.getElementById('lyrics').textContent = getRandomLyric();
+
+// Login Modal Functionality
+function handleLoginModal() {
+    const isLoggedIn = localStorage.getItem("loggedIn"); // Simulate login status
+    const modal = document.getElementById("loginModal");
+  
+    if (!isLoggedIn) {
+      modal.classList.add("show");
+    }
+  
+    // Handle login form submission
+    document.getElementById("loginForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      localStorage.setItem("loggedIn", true); // Set user as logged in
+      modal.classList.remove("show");
+    });
+  }
+  
+  // Initialize Both Functions
+  document.addEventListener("DOMContentLoaded", () => {
+    getRandomLyric();
+    handleLoginModal();
+  });
 

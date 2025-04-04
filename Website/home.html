@@ -3,75 +3,80 @@
 <head>
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Jukeboxx</title>
     <style>
-       /* Remove default margins and padding */
-       body, html
-            {
-                margin: 0;
-                padding: 0;
-                overflow-x: hidden; /* Prevent horizontal scrolling */
-            }
 
-            header 
+        /*Login Form Styling */
+        .modal 
             {
-                background-color: white;
-                padding: 10px 20px; /* Space inside the header */
-                position: fixed; /* Sticks to the top of the page */
+                color: white;
+                display: flex;
+                position: fixed;
                 top: 0;
                 left: 0;
-                right: 0;
-                z-index: 1000; /* Ensures the header is on top of other elements */
+                width: 100vw;
+                height: 100vh;
+                z-index: 2; /* High value to bring it to the foreground */
+                background-color: rgba(0, 0, 0, 0.5);
+                justify-content: center;
+                align-items: center;
             }
 
-            .header-nav 
+        .modal-content 
             {
-                font-family: 'aboxfor', sans-serif;
-                display: flex;
-                justify-content: space-between; /* Spreads links evenly */
-                align-items: center; /* Vertically centers the content */
-                margin: 0; /* Removes any extra spacing */
-            }
-
-         .header-nav a 
-            {
-                color: black;
-                text-decoration: none;
-                font-size: 30px;
-                margin: 0 10px;
-                padding: 10px 15px; /* Adds space inside the clickable area */
-                display: inline-block;
-            }
-
-            body 
-            {
-                padding-top: 50px; /* Ensures content below the header is not hidden */
                 background-color: black;
+                padding: 20px;
+                width: 300px;
+                border-radius: 0px;
+                text-align: center;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             }
 
-
-            #site-title
+        .modal.show 
             {
-                font-size: 40px;
-                font-family: 'Retrorama', sans-serif;
+                font-family: 'Times New Roman', Times, serif;
+                display: flex;
             }
+            
+        #login-text
+        {
+            font-size: 50px;
+            font-family: 'aboxfor', sans-serif;
+            font: bold;
 
-            @font-face
-             {
-                font-family: 'Retrorama';
-                src:  url('retroma_vibes/RetromaVibes.ttf');
-                font-size: 40px;
-                font-weight: normal;
-                font-style: normal;
-            }
+        }
 
-            @font-face {
-                font-family: 'aboxfor';
-                src: url('a_box_for/A_Box_For.ttf');
+        label
+        {
+            display: flex;
+        }
+        input
+        {
+            display: flex;
+        }
 
-            }
-        .album-container {
+        #button
+        {
+          color: white;
+          background-color: black;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 30px;
+          cursor: pointer;
+          margin-top: 30px;
+          border-radius: 0px;
+          border: none;
+
+        }
+
+        #button:hover
+        {
+            font-family: 'Retrorama', sans-serif;
+        }
+
+        .album-container 
+        {
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -151,21 +156,42 @@
 
 </head>
 
-<header>
 
-    <nav class="header-nav">
-      <a href="rank_pop_up.html">Rank</a>
-      <a href="review.html">Review</a>
-      <a id='site-title' href="home.html" >Jukeboxx</a>
-      <a href="feed.html">Feed</a>
-      <a href="profile.html">Profile</a>
-    </nav>
-  </header>
 
 
 <div id="lyrics"></div>
 <script src="script.js"></script>
+<body>    
+    <div id="header-container"></div>
+</body>
+<script>
+     // Fetch the header
+     fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-container").innerHTML = data;
+            });
 
+</script>
+
+
+
+ <!-- Login/Register Modal -->
+ <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <h2 id="login-text">Speak   Your Mind</h2>
+      <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button id="button">Login</button>
+      </form>
+      <p>Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 
 
 <body>

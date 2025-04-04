@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <button id="logout-btn">Logout</button>
+
+    <script>
+        document.getElementById("logout-btn").addEventListener("click", () => {
+  localStorage.removeItem("loggedIn");
+  window.location.href = "home.html"; // Redirect to another page
+});
+
+    </script>
+</html>
+
+

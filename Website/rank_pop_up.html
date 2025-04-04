@@ -79,7 +79,8 @@
                 margin: 5px;
             }
 
-            .popup-content button {
+            .popup-content button 
+            {
                 padding: 15px;
                 font-family: 'Times New Roman', Times, serif;
                 background-color: black;
@@ -147,29 +148,26 @@
 
   
 
-            @font-face
-             {
-                font-family: 'Retrorama';
-                src:  url('retroma_vibes/RetromaVibes.ttf');
-                font-size: 40px;
-                font-weight: normal;
-                font-style: normal;
-            }
+        @font-face
+        {
+            font-family: 'Retrorama';
+            src:  url('retroma_vibes/RetromaVibes.ttf');
+        }
 
-            @font-face {
-                font-family: 'aboxfor';
-                src: url('a_box_for/A_Box_For.ttf');
-
-            }
+        @font-face 
+        {
+            font-family: 'aboxfor';
+            src: url('a_box_for/A_Box_For.ttf');
+        }
             
         </style>
     <header>
         <nav class="header-nav">
-          <a href="rank.html">Rank</a>
-          <a href="/review.html">Review</a>
+          <a href="rank_pop_up.html">Rank</a>
+          <a href="review.html">Review</a>
           <a id='site-title' href="home.html" >Jukeboxx</a>
-          <a href="/feed.html">Feed</a>
-          <a href="/profile.html">Profile</a>
+          <a href="feed.html">Feed</a>
+          <a href="profile.html">Profile</a>
         </nav>
       </header>
       
@@ -182,7 +180,7 @@
         
             <form id="ranking-form">
                 <h1 id="rank-header">Rank</h1>
-                <label for="name">Name:</label>
+                <label for="name">List Name:</label>
                 <input type="text" id="name" placeholder="Enter the name of your list" required>
 
                 <label for="num-spots">Spots:</label>
@@ -210,12 +208,18 @@
         document.getElementById("ranking-form").onsubmit = function(event) {
             event.preventDefault(); // Prevent form from submitting normally
             const name = document.getElementById("name").value;
-            const numSpots = document.getElementById("num-spots").value;
+            const spots = document.getElementById("num-spots").value;
             const theme = document.getElementById("theme").value;
+
+            localStorage.setItem("rankName", name);
+            localStorage.setItem("numspots", spots);
+            localStorage.setItem("theme", theme);
+
 
 
             // Close the pop-up
             document.getElementById("popup-overlay").style.display = "none";
+            window.location.href = `rank.html?spots=${spots}&theme=${encodeURIComponent(theme)}`;
         }
     </script>
 </body>
